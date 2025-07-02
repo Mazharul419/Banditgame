@@ -2,10 +2,10 @@
 
 ## Level 0
 
-To solve I ssh into the bandit game using the following format:
+Problem: Connect to banditgame via SSH
 
-ssh [username]@[Domain] -p [Portnumber]
 
+Hints:
 
 username is bandit0
 
@@ -14,7 +14,12 @@ domain is bandit.labs.overthewire.org
 port number is 2220
 
 
-Final command is:
+To solve the ssh into the bandit game using the following format:
+
+ssh [username]@[Domain] -p [Portnumber]
+
+
+inputting the above details I get the final command:
 
 ssh bandit0@bandit.labs.overthewire.org -p 2220
 

@@ -24,7 +24,7 @@ I tried different options:
 2) Treating the file as a folder and attempting to cd into it - no success
 3) Using "" and / symbols so the shell interprets the - as a name as opposed to a signal
 
-### A fourth solution then broke the cycle
+### A precise search then broke the cycle!
 
 I searched "- file linux" into google and the first link that popped up was a stack overflow from 8 years ago...
 

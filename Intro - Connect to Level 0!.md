@@ -1,8 +1,8 @@
 # Banditgame
 
-## Level 0
+## Connect to Level 0
 
-Problem: Connect to banditgame via SSH
+Problem: Connect to banditgame bandit0 via SSH
 
 
 Hints:
@@ -25,3 +25,6 @@ ssh bandit0@bandit.labs.overthewire.org -p 2220
 
 this will prompt me to enter a password which is also bandit 0
 
+# SUCCESS!
+
+## Onto Level 0!

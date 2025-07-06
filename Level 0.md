@@ -1,4 +1,4 @@
-# Level 1
+# Level 0
 
 Problem: Find the password within the readme located in home directory
 

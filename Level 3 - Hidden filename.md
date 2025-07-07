@@ -26,4 +26,4 @@ To get to the .Hiding-From-You file the cat command is used - I realised typing 
 
 ## SUCCESS!
 
-Password found, and ssh onto Level 4!
+Password found, and ssh onto Level 4 using new password 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ!

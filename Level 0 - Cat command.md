@@ -22,7 +22,7 @@ Using the new password - I disconnected from the current bandit0 user using the 
 
 ![image](https://github.com/user-attachments/assets/d30ba101-e358-4623-b622-51f58623fdaa)
 
-and reconnected with bandit1 as my username and the new password I found:
+and reconnected with bandit1 as my username and the new password I found ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If:
 
 ![image](https://github.com/user-attachments/assets/1423f87f-b062-4c43-813d-a30c0328c327)
 

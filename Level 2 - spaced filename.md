@@ -25,7 +25,7 @@ Below are each of these respectively:
 
 ## SUCCESS!!
 
-Exited and ssh'd into level 3!
+Exited and ssh'd into level 3 using new password MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx!
 
 ![image](https://github.com/user-attachments/assets/e21f2406-7a8b-44b9-ab7e-08d758c144d0)
 

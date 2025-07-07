@@ -41,7 +41,7 @@ So I tried this in the terminal:
 
 ## SUCCESS!
 
-Lo and behold - it worked, and the password to the next level revealed itself
+Lo and behold - it worked, and the password to the next level revealed itself 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
 
 
 There was an alternative solution too proposed using redirection:

@@ -13,11 +13,15 @@ Located the file will be very tricky since there are many folders - manual searc
 
 For this level I looked at the man page for the find command:
 
-The find command can be followed with a -size argument and specifying c, for kb for file size.
+I then ran the command find command followed by the arguments for each requirement:
 
-I then ran the command find ./* -size 1033c to search the inhere folder for the file containing exactly 1033kb of size:
+Type: I am looking for a file, so I use -type f
+Size: The file needs to be 1033b in size, so I use the -size 1033c command, where c is the file size in b
+Not Executable: The file is not executable so using the -executable argument, combined with ! as NOT
 
-![image](https://github.com/user-attachments/assets/663fabc3-9689-4373-80bf-8b7e31123fe4)
+The final command is:
+
+![image](https://github.com/user-attachments/assets/d26d3c20-10a4-4691-a867-5d6e6fcb9f0f)
 
 I then used the cat command to obtain the password:
 

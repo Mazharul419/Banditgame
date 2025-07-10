@@ -16,7 +16,7 @@ Alongside the size argument I have the command - since the file is somewhere on 
 Only one file matched the result:
 ![image](https://github.com/user-attachments/assets/1d8ec48c-4d2a-42cb-9560-89890f85b036)
 
-Using cat I obtained the password:
+Using cat I obtained the password morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj:
 ![image](https://github.com/user-attachments/assets/7fe0b9ef-7585-45a2-9e76-0b52983a30c3)
 
 ## Success!!

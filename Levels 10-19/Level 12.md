@@ -52,7 +52,7 @@ Success! The file can now be worked on.
 
 <br>
 
-## 2. Investigating and decompressing file
+## 2. Investigating and reversing hexdump of file
 
 To see the contents of the file the `cat` and `head` command are used:
 
@@ -70,17 +70,85 @@ To see the contents of the file the `cat` and `head` command are used:
 
 <br>
 
-The file is a hexdump - which is used to present data in a easy-to-read way for analysis.
+The file has hexdump applied to it - which is used to present data in a easy-to-read way for analysis.
 
-To reverse the hexdump - the `xxd -r` command is used:
+To reverse the hexdump to get the original file - the `xxd -r` command is used:
 
-    
+    $ xxd -r data.txt compresseddata
+    $ ls
+    compresseddata  data.txt
 
+The original data looks like this:
 
-## 3. 
+    $ cat compresseddata | head                                                  
+    CngH ՟VE.@#ƒU]1,0|$':54\O7_P-(94   8?"&tZ|TI˖ZsEB-&x?d]9Q&A)`^Ǽ@4萷#QP@[[ʎ@딋^a3/>Z6+y
+    {YW6k~XDӨsX&x^I     @˳\\ z#!SÍꤜTf$:r-Q��*&)0?M!-Va<ѠtB*=o#V0U(S9VPx+C/[\ч=0:v~YR@VڥV#_U|
 
+This is ready to be decompressed.
 
-## 4. 
+## 3. Decompressing file #1 - gzip to bzip2
+
+To decompress the file - the file type is required to know the appopriate decompression command
+
+Using `file` this can be found out straight away:
+
+    $ file compresseddata
+    compresseddata: gzip compressed data, was "data2.bin", last modified: Mon Jul 28 19:03:32 2025, max compression, from Unix, original size modulo 2^32 578
+
+The first part - `...gzip compressed data...` shows this is a gzip file.
+
+The appopriate command is `gzip -d <file>` 
+
+Substituting:
+
+    $ gzip -d compresseddata
+    gzip: compresseddata: unknown suffix -- ignored 
+
+gzip does not recognise the `compresseddata` file as a gzip file. To ensure it does the `.gz` suffix needs to be added.
+
+The `mv` command is used to do this:
+
+    $ mv compresseddata compresseddata.gz
+    $ ls                                                                        
+    compresseddata.gz  data.txt
+
+This is complete - reattempting the decompression:
+
+    $ gzip -d compresseddata.gz
+    $ ls                                                                        
+    compresseddata  data.txt
+
+This is complete - the new file type is:
+
+    $ file compresseddata
+    compresseddata: bzip2 compressed data, block size = 900k
+
+It is bzip2 - onto the next decompression!
+
+## 4. Decompressing file #2 - bzip to gzip
+
+As stated above - the file is bzip2 - the command to decompress is:
+
+    $ bzip2 -d <file>
+
+Substituting and executing:
+
+    $ bzip2 -d compresseddata
+    bzip2: Can't guess original name for compresseddata -- using compresseddata.out                                
+    $ ls                                                                        
+    compresseddata.out  data.txt
+
+> bzip2 will attempt to guess the original filename if the file ended in .gz or .gz2 et al. - but since there is no suffix, it simply adds `.out` - but this is fine.
+
+This is complete - the new file type is:
+
+    $ file compresseddata.out
+    compresseddata.out: gzip compressed data, was "data4.bin", last modified: Mon Jul 28 19:03:32 2025, max compression, from Unix, original size modulo 2^32 20480 
+
+It is gzip once more - onto the next decompression!
+
+## 5. Decompressing file #2 - gzip to 
+
 
 
 ## AWESOME!!!

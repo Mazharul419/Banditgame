@@ -127,27 +127,44 @@ It is bzip2 - onto the next decompression!
 
 ## 4. Decompressing file #2 - bzip to gzip
 
+Prior to decompressing - the file will be renamed with the .bz2 extension:
+
+    $ mv compresseddata compresseddata.bz2
+
 As stated above - the file is bzip2 - the command to decompress is:
 
     $ bzip2 -d <file>
 
 Substituting and executing:
 
-    $ bzip2 -d compresseddata
-    bzip2: Can't guess original name for compresseddata -- using compresseddata.out                                
+    $ bzip2 -d compresseddata.bz2
+                                    
     $ ls                                                                        
-    compresseddata.out  data.txt
+    compresseddata  data.txt    
 
-> bzip2 will attempt to guess the original filename if the file ended in .gz or .gz2 et al. - but since there is no suffix, it simply adds `.out` - but this is fine.
 
 This is complete - the new file type is:
 
-    $ file compresseddata.out
-    compresseddata.out: gzip compressed data, was "data4.bin", last modified: Mon Jul 28 19:03:32 2025, max compression, from Unix, original size modulo 2^32 20480 
+    $ file compresseddata
+    compresseddata: gzip compressed data, was "data4.bin", last modified: Mon Jul 28 19:03:31 2025, max               compression, from Unix, original size modulo 2^32 20480
 
 It is gzip once more - onto the next decompression!
 
-## 5. Decompressing file #2 - gzip to 
+## 5. Decompressing file #3 - gzip to tar
+
+Since the file is a gzip - the steps are the same as earlier:
+
+    $ mv compresseddata compresseddata.gz
+    $ ls
+    compresseddata.gz  data.txt
+    $ ls compresseddata  data.txt
+
+The file is a tar file:
+
+    $ file compresseddata 
+    compresseddata: POSIX tar archive (GNU)
+
+## 5. Decompressing file #3 - gzip to tar
 
 
 

@@ -166,6 +166,23 @@ The file is a tar file:
 
 ## 5. Decompressing file #3 - gzip to tar
 
+For tar file - the file is renamed:
+
+     $ mv compresseddata compresseddata.tar
+     $ ls
+     compresseddata.tar  data.txt
+
+File is decompressed using the `tar -xf` command
+
+    $ tar -xf compresseddata.tar
+    $ ls
+    compresseddata.tar  data5.bin  data.txt
+
+The new file type is tar aswell:
+
+    $ file data5.bin 
+    data5.bin: POSIX tar archive (GNU)
+
 
 
 ## AWESOME!!!
